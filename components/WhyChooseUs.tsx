@@ -31,10 +31,10 @@ export default function WhyChooseUs() {
             Our Philosophy
           </span>
           <h2 className="text-white text-4xl md:text-5xl font-display font-light leading-tight mt-3">
-            Why Choose <span className="italic">Zreebas</span>
+            Why Choose <span className="italic">Zreenas</span>
           </h2>
           <p className="text-text-muted text-lg font-body mt-4 max-w-2xl mx-auto leading-relaxed">
-            Discover what makes Zreebas Spa the preferred choice for hundreds of
+            Discover what makes Zreenas Spa the preferred choice for hundreds of
             satisfied customers seeking ultimate wellness.
           </p>
         </div>
