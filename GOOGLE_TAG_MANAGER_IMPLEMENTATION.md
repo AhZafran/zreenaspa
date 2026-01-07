@@ -4,7 +4,7 @@
 This document outlines the implementation of Google Tag Manager (GTM) for the Klinik WeCare website, built with Next.js 14+ using the App Router.
 
 ## GTM Container ID
-- **Container ID**: `GTM-N9FN4PTS`
+- **Container ID**: `GTM-5BLGJH4K`
 
 ## Implementation Details
 
@@ -29,7 +29,7 @@ The GTM header script is placed in the `<head>` section using Next.js's `Script`
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-N9FN4PTS');
+        })(window,document,'script','dataLayer','GTM-5BLGJH4K');
       `,
     }}
   />
@@ -50,7 +50,7 @@ The GTM noscript fallback is placed immediately after the opening `<body>` tag:
   {/* Google Tag Manager (noscript) */}
   <noscript>
     <iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-N9FN4PTS"
+      src="https://www.googletagmanager.com/ns.html?id=GTM-5BLGJH4K"
       height="0"
       width="0"
       style={{ display: "none", visibility: "hidden" }}
@@ -86,14 +86,14 @@ Using Next.js's `Script` component instead of a standard `<script>` tag provides
 1. Install the Google Tag Assistant Chrome extension
 2. Visit your website
 3. Click the Tag Assistant icon
-4. Verify that GTM container `GTM-N9FN4PTS` is detected
+4. Verify that GTM container `GTM-5BLGJH4K` is detected
 
 ### 2. Verify in Browser DevTools
 1. Open Chrome DevTools (F12)
 2. Go to Network tab
 3. Filter by "gtm"
 4. Refresh the page
-5. Confirm `gtm.js?id=GTM-N9FN4PTS` loads successfully
+5. Confirm `gtm.js?id=GTM-5BLGJH4K` loads successfully
 
 ### 3. Check dataLayer
 1. Open Chrome DevTools Console
@@ -116,7 +116,7 @@ Once GTM is installed, you can configure tags in the GTM dashboard for:
 
 1. **Environment Variables** (Optional Enhancement):
    ```tsx
-   const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-N9FN4PTS';
+   const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-5BLGJH4K';
    ```
 
 2. **Development vs Production**:
@@ -159,6 +159,6 @@ Once GTM is installed, you can configure tags in the GTM dashboard for:
 
 ## Maintenance Notes
 - **Last Updated**: January 2026
-- **GTM Container**: GTM-N9FN4PTS
+- **GTM Container**: GTM-5BLGJH4K
 - **Implementation Type**: Next.js App Router with Script component
 - **Status**: Active and verified
