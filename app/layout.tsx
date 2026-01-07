@@ -70,6 +70,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark ${poppins.variable}`}>
       <head>
+        {/* Structured Data */}
+        <LocalBusinessSchema />
+        <BreadcrumbSchema />
+      </head>
+      <body className={`${poppins.className} antialiased bg-background-dark text-text-muted`}>
         {/* Google Tag Manager */}
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <script
@@ -82,11 +87,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }}
           ></script>
         )}
-        {/* Structured Data */}
-        <LocalBusinessSchema />
-        <BreadcrumbSchema />
-      </head>
-      <body className={`${poppins.className} antialiased bg-background-dark text-text-muted`}>
         {/* Google Tag Manager (noscript) */}
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <noscript>
