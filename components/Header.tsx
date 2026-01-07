@@ -59,10 +59,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full border-b border-primary/20 ${
         isScrolled
-          ? "bg-surface-dark/95 backdrop-blur-md"
-          : "bg-surface-dark/90 backdrop-blur-md"
+          ? "bg-primary/95 backdrop-blur-md shadow-lg"
+          : "bg-primary/90 backdrop-blur-md"
       }`}
     >
       <Container>
@@ -92,7 +92,7 @@ export default function Header() {
                   key={link.name}
                   onClick={() => handleNavClick(link.href)}
                   className={`text-sm font-medium uppercase tracking-wide transition-colors ${
-                    isActive ? "text-primary" : "text-white hover:text-primary"
+                    isActive ? "text-white" : "text-gray-800 hover:text-white"
                   }`}
                 >
                   {link.name}
@@ -106,7 +106,7 @@ export default function Header() {
             <Button
               size="default"
               onClick={() => window.open(whatsappUrl, "_blank")}
-              className="gap-2 bg-primary hover:bg-primary/90 text-background-dark font-bold uppercase tracking-wide rounded-full"
+              className="gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold uppercase tracking-wide rounded-full shadow-md"
             >
               <MessageCircle className="h-4 w-4" />
               WhatsApp Us
@@ -115,7 +115,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white p-2"
+            className="md:hidden text-gray-800 p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -129,7 +129,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-6 border-t border-white/10">
+          <div className="md:hidden py-6 border-t border-white/20">
             <nav className="flex flex-col space-y-4">
               {navigationLinks.map((link) => {
                 const sectionId = link.href.replace("#", "");
@@ -140,7 +140,7 @@ export default function Header() {
                     key={link.name}
                     onClick={() => handleNavClick(link.href)}
                     className={`text-left text-base font-medium uppercase tracking-wide transition-colors ${
-                      isActive ? "text-primary" : "text-white hover:text-primary"
+                      isActive ? "text-white" : "text-gray-800 hover:text-white"
                     }`}
                   >
                     {link.name}
@@ -150,7 +150,7 @@ export default function Header() {
               <Button
                 size="default"
                 onClick={() => window.open(whatsappUrl, "_blank")}
-                className="gap-2 bg-primary hover:bg-primary/90 text-background-dark font-bold uppercase tracking-wide rounded-full mt-4"
+                className="gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold uppercase tracking-wide rounded-full mt-4 shadow-md"
               >
                 <MessageCircle className="h-4 w-4" />
                 Chat with Us

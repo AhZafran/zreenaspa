@@ -18,16 +18,16 @@ export default function ContactUs() {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.3371855424866!2d101.53907769999999!3d3.0036272999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb29abdf55fd9%3A0x209a152a76a49dcc!2sZreenas%20Massage%20and%20Nails%20Spa%20(%20Muslimah%20Friendly%20Spa%20)!5e0!3m2!1sen!2smy!4v1767171633732!5m2!1sen!2smy";
 
   return (
-    <section id="contact" className="section-padding bg-background-dark">
+    <section id="contact" className="section-padding bg-background-light">
       <Container>
         <div className="text-center mb-16">
           <span className="text-primary font-body uppercase tracking-widest text-sm">
             Connect with Us
           </span>
-          <h2 className="text-white text-4xl md:text-5xl font-display font-light leading-tight mt-3">
+          <h2 className="text-text-main text-4xl md:text-5xl font-display font-light leading-tight mt-3">
             Get in <span className="italic">Touch</span>
           </h2>
-          <p className="text-text-muted text-lg font-body mt-4 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-lg font-body mt-4 max-w-2xl mx-auto leading-relaxed">
             We would love to hear from you. Reach out to us for appointments or
             inquiries.
           </p>
@@ -36,8 +36,8 @@ export default function ContactUs() {
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Contact Information Card */}
           <div className="space-y-6">
-            <Card className="p-8 hover:shadow-2xl transition-shadow bg-surface-dark">
-              <h3 className="text-2xl font-display font-semibold text-white mb-8">
+            <Card className="p-8 hover:shadow-2xl transition-shadow bg-white border-gray-200">
+              <h3 className="text-2xl font-display font-semibold text-text-main mb-8">
                 Contact Information
               </h3>
 
@@ -47,10 +47,10 @@ export default function ContactUs() {
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-display font-semibold text-white mb-1 text-lg">Phone</h4>
+                  <h4 className="font-display font-semibold text-text-main mb-1 text-lg">Phone</h4>
                   <a
                     href={`tel:${CONTACT_INFO.phone}`}
-                    className="text-text-muted font-body hover:text-primary transition-colors"
+                    className="text-gray-600 font-body hover:text-primary transition-colors"
                   >
                     {CONTACT_INFO.phone}
                   </a>
@@ -63,8 +63,8 @@ export default function ContactUs() {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-display font-semibold text-white mb-1 text-lg">Address</h4>
-                  <p className="text-text-muted font-body">{CONTACT_INFO.address}</p>
+                  <h4 className="font-display font-semibold text-text-main mb-1 text-lg">Address</h4>
+                  <p className="text-gray-600 font-body">{CONTACT_INFO.address}</p>
                 </div>
               </div>
 
@@ -74,7 +74,7 @@ export default function ContactUs() {
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-display font-semibold text-white mb-3 text-lg">
+                  <h4 className="font-display font-semibold text-text-main mb-3 text-lg">
                     Business Hours
                   </h4>
                   <div className="space-y-2">
@@ -83,8 +83,8 @@ export default function ContactUs() {
                         key={index}
                         className="flex justify-between text-sm font-body"
                       >
-                        <span className="text-white font-medium">{schedule.days}</span>
-                        <span className="text-text-muted">{schedule.hours}</span>
+                        <span className="text-text-main font-medium">{schedule.days}</span>
+                        <span className="text-gray-600">{schedule.hours}</span>
                       </div>
                     ))}
                   </div>
@@ -105,7 +105,7 @@ export default function ContactUs() {
 
           {/* Google Maps */}
           <div className="space-y-4">
-            <Card className="p-0 overflow-hidden h-full min-h-[400px] bg-surface-dark">
+            <Card className="p-0 overflow-hidden h-full min-h-[400px] bg-white border-gray-200">
               <iframe
                 src={googleMapsEmbedUrl}
                 width="100%"
@@ -123,7 +123,7 @@ export default function ContactUs() {
               size="lg"
               variant="outline"
               onClick={() => window.open("https://maps.google.com", "_blank")}
-              className="w-full gap-2"
+              className="w-full gap-2 border-gray-300 text-text-main hover:bg-gray-100"
             >
               <Navigation className="h-5 w-5" />
               Get Directions

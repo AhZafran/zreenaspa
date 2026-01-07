@@ -6,17 +6,17 @@ import { SERVICES } from "@/constants/services";
 
 export default function Services() {
   return (
-    <section id="services" className="section-padding bg-background-dark">
+    <section id="services" className="section-padding bg-amber-50">
       <Container>
         <div className="flex flex-col items-start mb-14">
           <div className="max-w-2xl">
             <span className="text-primary font-body uppercase tracking-widest text-sm">
               Curated for You
             </span>
-            <h2 className="text-white text-4xl md:text-5xl font-display font-light leading-tight mt-3">
+            <h2 className="text-text-main text-4xl md:text-5xl font-display font-light leading-tight mt-3">
               Signature Bespoke Experiences
             </h2>
-            <p className="text-text-muted text-lg font-body mt-4 leading-relaxed">
+            <p className="text-gray-600 text-lg font-body mt-4 leading-relaxed">
               Each treatment is a journey tailored to your needs, promising
               profound relaxation and rejuvenation.
             </p>
@@ -35,9 +35,9 @@ export default function Services() {
             return (
               <Card
                 key={service.id}
-                className="group bg-surface-dark border border-primary/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 overflow-hidden"
+                className="group bg-white border border-primary/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 overflow-hidden"
               >
-                <div className="aspect-video w-full overflow-hidden bg-surface-dark">
+                <div className="aspect-video w-full overflow-hidden bg-gray-100">
                   <img
                     src={service.image}
                     alt={service.name}
@@ -45,12 +45,12 @@ export default function Services() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-2xl font-display text-white">
+                  <CardTitle className="text-2xl font-display text-text-main">
                     {service.name}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base font-body text-text-muted leading-relaxed">
+                  <CardDescription className="text-base font-body text-gray-600 leading-relaxed">
                     {service.description}
                   </CardDescription>
                 </CardContent>

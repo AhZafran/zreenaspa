@@ -11,20 +11,25 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#d4af37", // Elegant Gold
-          light: "#e8c872",
-          dark: "#b8941f",
+          DEFAULT: "#e1c16e", // Main Gold Color
+          light: "#ebd89a",
+          dark: "#c9ab52",
+        },
+        secondary: {
+          DEFAULT: "#ffffff", // White
+          light: "#ffffff",
+          dark: "#f5f5f5",
         },
         background: {
-          light: "#f6f8f7",
-          dark: "#0d0d0d", // Rich Dark Background
+          light: "#ffffff",
+          dark: "#2D1B00", // Warm dark brown instead of black
         },
         surface: {
           light: "#ffffff",
-          dark: "#1a1a1a", // Darker surface for contrast
+          dark: "#3D2B12", // Warm brown surface
         },
         text: {
-          main: "#0e1b17",
+          main: "#000000", // Black for white backgrounds
           muted: "#d4d4d4", // Lighter text for dark backgrounds
         },
       },

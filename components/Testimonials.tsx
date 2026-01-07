@@ -52,16 +52,16 @@ export default function Testimonials() {
   }
 
   return (
-    <section id="testimonials" className="section-padding bg-background-dark">
+    <section id="testimonials" className="section-padding bg-rose-50">
       <Container>
         <div className="text-center mb-16">
           <span className="text-primary font-body uppercase tracking-widest text-sm">
             Testimonials
           </span>
-          <h2 className="text-white text-4xl md:text-5xl font-display font-light leading-tight mt-3">
+          <h2 className="text-text-main text-4xl md:text-5xl font-display font-light leading-tight mt-3">
             What Our Customers <span className="italic">Say</span>
           </h2>
-          <p className="text-text-muted text-lg font-body mt-4 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-lg font-body mt-4 max-w-2xl mx-auto leading-relaxed">
             Don't just take our word for it. Here's what our valued customers have
             to say about their experiences.
           </p>
@@ -73,7 +73,7 @@ export default function Testimonials() {
             {visibleTestimonials.map((testimonial, index) => (
               <Card
                 key={`${testimonial.id}-${index}`}
-                className="hover:shadow-2xl transition-shadow bg-surface-dark"
+                className="hover:shadow-2xl transition-shadow bg-white border-primary/30"
               >
                 <CardContent className="p-8">
                   <div className="flex items-center justify-between mb-6">
@@ -90,15 +90,15 @@ export default function Testimonials() {
                     </div>
                     <Quote className="w-8 h-8 text-primary/20" />
                   </div>
-                  <p className="text-text-muted font-body text-base leading-relaxed mb-6 italic">
+                  <p className="text-gray-600 font-body text-base leading-relaxed mb-6 italic">
                     "{testimonial.text}"
                   </p>
-                  <div className="border-t border-white/10 pt-4">
-                    <p className="font-display font-semibold text-white text-lg">
+                  <div className="border-t border-gray-200 pt-4">
+                    <p className="font-display font-semibold text-text-main text-lg">
                       {testimonial.name}
                     </p>
                     {testimonial.date && (
-                      <p className="text-sm text-text-muted/60 font-body">{testimonial.date}</p>
+                      <p className="text-sm text-gray-500 font-body">{testimonial.date}</p>
                     )}
                   </div>
                 </CardContent>
@@ -112,7 +112,7 @@ export default function Testimonials() {
               variant="outline"
               size="icon"
               onClick={handlePrevious}
-              className="rounded-full"
+              className="rounded-full border-gray-300 text-text-main hover:bg-primary hover:text-white hover:border-primary"
               aria-label="Previous testimonials"
             >
               <ChevronLeft className="h-5 w-5" />
@@ -129,7 +129,7 @@ export default function Testimonials() {
                   className={`h-2 rounded-full transition-all ${
                     Math.floor(currentIndex / itemsPerView) === index
                       ? "bg-primary w-8"
-                      : "bg-white/20 w-2 hover:bg-white/40"
+                      : "bg-gray-300 w-2 hover:bg-gray-400"
                   }`}
                   aria-label={`Go to testimonial set ${index + 1}`}
                 />
@@ -140,7 +140,7 @@ export default function Testimonials() {
               variant="outline"
               size="icon"
               onClick={handleNext}
-              className="rounded-full"
+              className="rounded-full border-gray-300 text-text-main hover:bg-primary hover:text-white hover:border-primary"
               aria-label="Next testimonials"
             >
               <ChevronRight className="h-5 w-5" />
@@ -150,12 +150,13 @@ export default function Testimonials() {
 
         {/* Google Reviews Link */}
         <div className="text-center mt-12">
-          <p className="text-text-muted/60 font-body mb-4 text-sm">
+          <p className="text-gray-600 font-body mb-4 text-sm">
             Want to read more? Check out our reviews on Google!
           </p>
           <Button
             variant="outline"
             onClick={() => window.open("https://www.google.com/search?sca_esv=320ca73251b4d27b&hl=en&gl=MY&sxsrf=AE3TifMpRjbf-V0X9sziyEYALSFfmHuU_A:1767171624167&si=AMgyJEuzsz2NflaaWzrzdpjxXXRaJ2hfdMsbe_mSWso6src8s0Oc5omKe7TN5hou7ZIecz4_k3BA7C8Iyjfr4wEpTQcneI9iJa0uP_cq36tn-neOPxGtQA0njlI84VAjZpGk5FNTG1cglOOMYvNpGHuIulhpO2ozUkOuZsrHFnWgyHizntDE1bTdEvemFbI2nl8xsimZ61ka&q=Zreenas+Massage+and+Nails+Spa+%28+Muslimah+Friendly+Spa+%29+Reviews&sa=X&ved=2ahUKEwiBqKmnu-eRAxU5SGwGHcqpHb8Q0bkNegQIJxAE&biw=1920&bih=1000&dpr=1", "_blank")}
+            className="border-gray-300 text-text-main hover:bg-primary hover:text-white hover:border-primary"
           >
             View All Reviews on Google
           </Button>

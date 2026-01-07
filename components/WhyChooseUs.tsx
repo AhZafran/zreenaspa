@@ -24,16 +24,16 @@ export default function WhyChooseUs() {
   );
 
   return (
-    <section id="why-choose-us" className="section-padding bg-surface-dark">
+    <section id="why-choose-us" className="section-padding bg-background-light">
       <Container>
         <div className="text-center mb-16">
           <span className="text-primary font-body uppercase tracking-widest text-sm">
             Our Philosophy
           </span>
-          <h2 className="text-white text-4xl md:text-5xl font-display font-light leading-tight mt-3">
+          <h2 className="text-text-main text-4xl md:text-5xl font-display font-light leading-tight mt-3">
             Why Choose <span className="italic">Zreenas</span>
           </h2>
-          <p className="text-text-muted text-lg font-body mt-4 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-lg font-body mt-4 max-w-2xl mx-auto leading-relaxed">
             Discover what makes Zreenas Spa the preferred choice for hundreds of
             satisfied customers seeking ultimate wellness.
           </p>
@@ -46,14 +46,14 @@ export default function WhyChooseUs() {
             return (
               <Card
                 key={benefit.id}
-                className="hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-primary/20 bg-background-dark"
+                className="hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-2 border-gray-200 hover:border-primary/40 bg-white"
               >
                 <CardHeader>
                   <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     <Icon className="w-7 h-7 text-primary" />
                   </div>
-                  <CardTitle className="text-lg mb-2 font-display">{benefit.title}</CardTitle>
-                  <CardDescription className="text-base font-body leading-relaxed">
+                  <CardTitle className="text-lg mb-2 font-display text-text-main">{benefit.title}</CardTitle>
+                  <CardDescription className="text-base font-body leading-relaxed text-gray-600">
                     {benefit.description}
                   </CardDescription>
                 </CardHeader>
@@ -63,11 +63,11 @@ export default function WhyChooseUs() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-2xl p-8 md:p-12 border border-primary/20">
-          <h3 className="text-2xl md:text-3xl font-display font-normal text-white mb-4">
+        <div className="text-center bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-2xl p-8 md:p-12 border border-primary/30">
+          <h3 className="text-2xl md:text-3xl font-display font-normal text-text-main mb-4">
             Ready to Experience the Difference?
           </h3>
-          <p className="text-text-muted font-body mb-6 max-w-xl mx-auto leading-relaxed">
+          <p className="text-gray-600 font-body mb-6 max-w-xl mx-auto leading-relaxed">
             Join our community of happy customers and treat yourself to the
             relaxation you deserve.
           </p>

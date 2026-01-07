@@ -61,7 +61,7 @@ export default function Hero() {
             <Button
               size="lg"
               onClick={() => window.open(whatsappUrl, "_blank")}
-              className="gap-2 bg-primary hover:bg-primary/90 text-background-dark font-bold uppercase tracking-wide rounded-full transition-transform hover:scale-105 w-full sm:w-auto"
+              className="gap-2 bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-wide rounded-full transition-transform hover:scale-105 w-full sm:w-auto"
             >
               <MessageCircle className="h-5 w-5" />
               Explore Experiences
