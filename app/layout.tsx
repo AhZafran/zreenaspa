@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { LocalBusinessSchema, BreadcrumbSchema } from "./structured-data";
+import GoogleTagManager from "@/components/GoogleTagManager";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -88,15 +88,9 @@ export default function RootLayout({
           </noscript>
         )}
         {children}
-        {/* Google Tag Manager Script */}
+        {/* Google Tag Manager */}
         {process.env.NEXT_PUBLIC_GTM_ID && (
-          <Script
-            id="gtm-init"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');`,
-            }}
-          />
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
         )}
       </body>
     </html>
