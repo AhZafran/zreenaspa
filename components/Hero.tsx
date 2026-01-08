@@ -1,16 +1,11 @@
 "use client";
 
 import { MessageCircle, ArrowDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { CONTACT_INFO } from "@/constants/contact";
-import { getWhatsAppUrl } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 export default function Hero() {
-  const whatsappUrl = getWhatsAppUrl(
-    CONTACT_INFO.whatsappNumber,
-    CONTACT_INFO.whatsappMessage
-  );
 
   return (
     <section
@@ -58,14 +53,18 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-            <Button
-              size="lg"
-              onClick={() => window.open(whatsappUrl, "_blank")}
-              className="gap-2 bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-wide rounded-full transition-transform hover:scale-105 w-full sm:w-auto"
+            <a
+              href="https://wa.link/qitfh4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "gap-2 bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-wide rounded-full transition-transform hover:scale-105 w-full sm:w-auto"
+              )}
             >
               <MessageCircle className="h-5 w-5" />
               Explore Experiences
-            </Button>
+            </a>
             <Button
               size="lg"
               variant="outline"

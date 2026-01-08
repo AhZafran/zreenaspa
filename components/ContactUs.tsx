@@ -2,16 +2,12 @@
 
 import { Phone, MapPin, Clock, MessageCircle, Navigation } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { CONTACT_INFO } from "@/constants/contact";
-import { getWhatsAppUrl } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 export default function ContactUs() {
-  const whatsappUrl = getWhatsAppUrl(
-    CONTACT_INFO.whatsappNumber,
-    CONTACT_INFO.whatsappMessage
-  );
 
   const googleMapsEmbedUrl =
     process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_URL ||
@@ -92,14 +88,18 @@ export default function ContactUs() {
               </div>
 
               {/* WhatsApp Button */}
-              <Button
-                size="lg"
-                onClick={() => window.open(whatsappUrl, "_blank")}
-                className="w-full gap-2"
+              <a
+                href="https://wa.link/qitfh4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "w-full gap-2"
+                )}
               >
                 <MessageCircle className="h-5 w-5" />
                 Message Us on WhatsApp
-              </Button>
+              </a>
             </Card>
           </div>
 

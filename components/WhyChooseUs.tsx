@@ -2,11 +2,10 @@
 
 import { Star, Award, Home, Tag, CreditCard, Users, MessageCircle } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { WHY_CHOOSE_US } from "@/constants/whyChooseUs";
-import { CONTACT_INFO } from "@/constants/contact";
-import { getWhatsAppUrl } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 const iconMap: Record<string, React.ElementType> = {
   star: Star,
@@ -18,10 +17,6 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function WhyChooseUs() {
-  const whatsappUrl = getWhatsAppUrl(
-    CONTACT_INFO.whatsappNumber,
-    CONTACT_INFO.whatsappMessage
-  );
 
   return (
     <section id="why-choose-us" className="section-padding bg-background-light">
@@ -71,14 +66,18 @@ export default function WhyChooseUs() {
             Join our community of happy customers and treat yourself to the
             relaxation you deserve.
           </p>
-          <Button
-            size="lg"
-            onClick={() => window.open(whatsappUrl, "_blank")}
-            className="gap-2 shadow-lg"
+          <a
+            href="https://wa.link/qitfh4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              buttonVariants({ size: "lg" }),
+              "gap-2 shadow-lg"
+            )}
           >
             <MessageCircle className="h-5 w-5" />
             Chat with Us Now
-          </Button>
+          </a>
         </div>
       </Container>
     </section>

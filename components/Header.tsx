@@ -3,10 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, MessageCircle, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { CONTACT_INFO } from "@/constants/contact";
-import { getWhatsAppUrl, scrollToSection } from "@/lib/utils";
+import { cn, scrollToSection } from "@/lib/utils";
 
 const navigationLinks = [
   { name: "Home", href: "#home" },
@@ -51,11 +50,6 @@ export default function Header() {
     scrollToSection(sectionId);
     setIsMenuOpen(false);
   };
-
-  const whatsappUrl = getWhatsAppUrl(
-    CONTACT_INFO.whatsappNumber,
-    CONTACT_INFO.whatsappMessage
-  );
 
   return (
     <header
@@ -103,14 +97,18 @@ export default function Header() {
 
           {/* WhatsApp CTA Button - Desktop */}
           <div className="hidden md:block">
-            <Button
-              size="default"
-              onClick={() => window.open(whatsappUrl, "_blank")}
-              className="gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold uppercase tracking-wide rounded-full shadow-md"
+            <a
+              href="https://wa.link/qitfh4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                buttonVariants({ size: "default" }),
+                "gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold uppercase tracking-wide rounded-full shadow-md"
+              )}
             >
               <MessageCircle className="h-4 w-4" />
               WhatsApp Us
-            </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -147,14 +145,18 @@ export default function Header() {
                   </button>
                 );
               })}
-              <Button
-                size="default"
-                onClick={() => window.open(whatsappUrl, "_blank")}
-                className="gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold uppercase tracking-wide rounded-full mt-4 shadow-md"
+              <a
+                href="https://wa.link/qitfh4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  buttonVariants({ size: "default" }),
+                  "gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold uppercase tracking-wide rounded-full mt-4 shadow-md"
+                )}
               >
                 <MessageCircle className="h-4 w-4" />
                 Chat with Us
-              </Button>
+              </a>
             </nav>
           </div>
         )}
