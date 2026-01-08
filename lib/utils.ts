@@ -6,14 +6,13 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 /**
- * Creates a WhatsApp URL with pre-filled message
- * @param phoneNumber - WhatsApp number with country code (e.g., "60123456789")
- * @param message - Pre-filled message text
+ * Returns the WhatsApp contact URL
+ * @param _phoneNumber - WhatsApp number with country code (not used, kept for compatibility)
+ * @param _message - Pre-filled message text (not used, kept for compatibility)
  * @returns WhatsApp URL
  */
-export function getWhatsAppUrl(phoneNumber: string, message: string): string {
-  const encodedMessage = encodeURIComponent(message);
-  return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+export function getWhatsAppUrl(_phoneNumber: string, _message: string): string {
+  return "https://wa.link/qitfh4";
 }
 
 /**

@@ -63,7 +63,7 @@ export default function Footer() {
                 G
               </a>
               <a
-                href={`https://wa.me/${CONTACT_INFO.whatsappNumber}`}
+                href="https://wa.link/qitfh4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/20 hover:bg-white hover:text-[#25D366] rounded-full flex items-center justify-center transition-colors"
